@@ -1,0 +1,378 @@
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.main .left{
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3% 20px 3% 5%;
+    min-height: 100vh;
+}
+.main .left .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+    color: var(--textColor);
+    padding: 10px;
+    border-radius: 5px;
+    transition: var(--transition);
+    width: 100%;
+}
+.main .left .search:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.main .left .search .icon{
+    color: var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.main .left .search input{
+    font-size: .9rem;
+    padding: 10px;
+    font-weight: 400;
+    border: none;
+    width: 70%;
+}
+.main .left .search input::placeholder{
+    color: var(--textColor);
+}
+.main .left .search input:focus{
+    outline-width: 0;
+}
+
+.main .left .temp{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    transition: var(--transition);
+    padding: 10px;
+    border-radius: 5px;
+}
+.main .left .temp:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.main .left .temp h3{
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: var(--textColor);
+    width: 100%;
+
+}
+.main .left .temp h5,.today h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--textColor);
+    border-bottom: 1px solid var(--navColor);
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.main .left .temp h5 span,.today h5 span{
+    color: var(--navColorDark);
+}
+.main .left .content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.main .left .content .box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    transition: var(--transition);
+    border-radius: 5px;
+    padding: 10px;
+}
+.main .left .content .box:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.main .left .content .box img{
+    width: 50px;
+    object-fit: cover;
+}
+.main .left .content .box h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+.main .left .city{
+    width: 100%;
+    background: url('../Assets/Images/city.jpg');
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    position: relative;
+    z-index: 0;
+    transition: var(--transition);
+}
+
+.main .left .city:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.main .left .city::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: var(--textColor);
+    opacity: .7;
+    z-index: -1;border-radius: 30px;
+}
+.main .left .city h3{
+    color: var(--textColorLight);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.main .right{
+    background-color: var(--navColor);
+    width: 70%;
+    padding: 3% 5% 3% 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main .right .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+.main .right .header .box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main .right .header .box:first-child button{
+    font-size: 1rem;
+    color: var(--navColorDark);
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.main .right .header .box:first-child button:hover{
+    color: var(--textColor);
+}
+.main .right .header .box:first-child .active{
+    color: var(--textColor);
+    border-bottom:2px solid var(--textColor);
+}
+
+.main .right .header .box:last-child button{
+    font-size: 1rem;
+    color: var(--textColor);
+    background-color: var(--textColorLight);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.main .right .header .box:last-child button:hover,.main .right .header .box:last-child .active{
+    color: var(--textColorLight);
+    background-color: var(--textColor);
+}
+
+.main .right .wrapper{
+    width: 100%;
+}
+
+.main .right .wrapper .today,.main .right .wrapper .week{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap:1rem;
+}
+
+.main .right .wrapper .today .cards,.main .right .wrapper .week .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main .right .wrapper .today .cards .card{
+    overflow: hidden;
+    width: calc(calc(100% - 1rem)/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--textColorLight);
+    padding: 20px;
+    border-radius: 10px;
+    transition: var(--transition);
+    gap: 1rem;
+}
+
+.main .right .wrapper .today .cards .card:hover,.main .right .wrapper .week > .cards .card:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main .right .wrapper .today .cards .card h4{
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--navColorDark);
+    align-self: flex-start;
+    text-transform: capitalize;
+}
+.main .right .wrapper .today .cards .card h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+.main .right .wrapper .week > .cards .card{
+    overflow: hidden;
+    width: calc(calc(100% - 2rem)/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--textColorLight);
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.main .right .wrapper .week .cards .card h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+.main .right .wrapper .week .cards .card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+.highlight{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--navColorDark);
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.error h2{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--secondaryCol);
+    text-transform: uppercase;
+}
+.error h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+/* Responsive */
+/* For Tablets */
+@media screen and (max-width:999px) {
+    .main .left{
+        width: 40%;
+    }
+    .main .right{
+        width: 60%;
+    }
+    .main .left .search{
+        gap: .5rem;
+        font-size: .9rem;
+    }
+    .main .left .search .icon{
+        font-size: .9rem;
+    }
+    .main .left .search input{
+        padding: 5px;
+        font-size: .9rem;
+        width: 80%;
+    }
+    .main .left .temp h3 {
+        font-size: 2rem;
+    }
+    .main .right .wrapper .today .cards .card {
+        width: 100%;
+    }
+    .main .right .wrapper .week > .cards .card {
+        width: calc(50% - .5rem);
+    }
+}
+/* For Phones */
+@media screen and (max-width:599px) {
+    .main{
+        flex-direction: column;
+    }
+    .main .left{
+        padding-top: 20px;
+    }
+    .main .left,.main .right{
+        width: 100%;
+        min-height: fit-content;
+        padding: 50px 5%;
+    }
+}
